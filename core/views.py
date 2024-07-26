@@ -7,5 +7,6 @@ def homeview(request):
 
 
 def project_listview(request):
-    data = Project.objects.all()
-    return render(request, 'core/projects.html', data)
+    context= {}
+    context['projects'] = Project.objects.all()
+    return render(request, 'core/projects.html', context)

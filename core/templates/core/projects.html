@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <div class="container">
+    {% for project in projects %}
+      <div class="card" style="width: 18rem;">
+        {% comment %} <img src="{% url 'images' %}" class="card-img-top" alt="..." /> {% endcomment %}
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          <p class="card-test">{{ project.technology_used }}</p>
+          <a href="#" class="btn btn-primary">Edit Page</a>
+        </div>
+      </div>
+      <br />
+    {% endfor %}
+  </div>
+{% endblock %}
