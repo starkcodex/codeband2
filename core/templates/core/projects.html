@@ -1,10 +1,8 @@
-{% extends 'core/base.html' %}
-
-{% block content %}
+{% extends 'core/base.html' %} {% load static %} {% block content %}
   <div class="container">
     {% for project in projects %}
       <div class="card" style="width: 18rem;">
-        {% comment %} <img src="{% url 'images' %}" class="card-img-top" alt="..." /> {% endcomment %}
+        {% comment %} <!-- <img src="{% project.url %}" class="card-img-top" alt="..." /> --> {% endcomment %}
         <div class="card-body">
           <h5 class="card-title">{{ project.title }}</h5>
           <p class="card-text">{{ project.description }}</p>
